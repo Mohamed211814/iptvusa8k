@@ -54,23 +54,23 @@ export default function HomePage() {
         {/* Section 1: Hero */}
         <Hero />
 
-        {/* Section 2: Subscription Plans (Directly accessible for fast ordering) */}
+        {/* Section 2: How It Works / Setup Guide (Quick Onboarding) */}
+        <HowItWorks />
+
+        {/* Section 3: Subscription Plans */}
         <Pricing />
 
-        {/* Section 3: Trust and Service Highlights */}
+        {/* Section 4: Trust and Service Highlights */}
         <Services />
 
-        {/* Section 4: About IPTV USA */}
+        {/* Section 5: About IPTV USA */}
         <About />
 
-        {/* Section 5: Features */}
+        {/* Section 6: Features */}
         <Features />
 
-        {/* Section 6: Supported Devices */}
+        {/* Section 7: Supported Devices */}
         <Devices />
-
-        {/* Section 7: How It Works */}
-        <HowItWorks />
 
         {/* Section 8: Frequently Asked Questions */}
         <FAQ />
