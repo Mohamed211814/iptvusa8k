@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+:root {
+  --color-bg-deep: #29166f;
+  --color-surface: #392b6b;
+  --color-gold: #ffd700;
+  --color-amber: #e3af2a;
+  --color-crimson: #c62b27;
+  --color-coral: #c36965;
+  --color-rose: #ebb0ad;
+  --color-lavender: #887eaa;
+  --color-pearl: #f4e9f1;
+
+  --background: #ffffff;
+  --foreground: #29166f;
+}
+
+@theme inline {
+  --color-brand-deep: #29166f;
+  --color-brand-surface: #392b6b;
+  --color-brand-gold: #ffd700;
+  --color-brand-amber: #e3af2a;
+  --color-brand-crimson: #c62b27;
+  --color-brand-coral: #c36965;
+  --color-brand-rose: #ebb0ad;
+  --color-brand-lavender: #887eaa;
+  --color-brand-pearl: #f4e9f1;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: light;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Ensure all anchored targets have sufficient clearance below the sticky navbar */
+[id] {
+  scroll-margin-top: 6rem;
+}
+
+body {
+  background-color: #ffffff;
+  color: #29166f;
+  font-family: var(--font-geist-sans), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar matching new palette */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f4e9f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #887eaa;
+  border-radius: 5px;
+  border: 2px solid #ffffff;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #392b6b;
+}
