@@ -40,7 +40,18 @@ export function getBreadcrumbsForPath(pathname: string): BreadcrumbItem[] {
     crumbs.push({ label: "Contact Us", href: "/contact", current: true });
   } else if (pathname === "/legal") {
     crumbs.push({ label: "Legal & Policies", href: "/legal", current: true });
+  } else if (pathname === "/blog") {
+    crumbs.push({ label: "Blog", href: "/blog", current: true });
   }
 
   return crumbs;
 }
+
+export function getBreadcrumbsForPost(title: string, slug: string): BreadcrumbItem[] {
+  return [
+    { label: "Home", href: "/" },
+    { label: "Blog", href: "/blog" },
+    { label: title, href: `/blog/${slug}`, current: true },
+  ];
+}
+

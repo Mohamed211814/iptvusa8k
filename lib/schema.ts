@@ -1,4 +1,5 @@
 import { siteConfig } from "./site-config";
+import type { BlogPost } from "./blog";
 
 const baseUrl = siteConfig.brand.url;
 const orgId = `${baseUrl}/#organization`;
@@ -195,3 +196,69 @@ export function getBreadcrumbSchema(
     })),
   };
 }
+
+/**
+ * Blog CollectionPage structured data
+ */
+export function getBlogPageSchema() {
+  const blogUrl = `${baseUrl}/blog`;
+  return {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": `${blogUrl}#collection`,
+    url: blogUrl,
+    name: `Blog & Streaming Guides | ${siteConfig.brand.name}`,
+    description: `Articles, tutorials, and setup guides for television streaming in the United States from ${siteConfig.brand.name}.`,
+    inLanguage: siteConfig.brand.language,
+    isPartOf: {
+      "@id": websiteId,
+    },
+    about: {
+      "@id": orgId,
+    },
+  };
+}
+
+/**
+ * Article / BlogPosting structured data for published blog posts
+ */
+export function getArticleSchema(post: BlogPost) {
+  const articleUrl = `${baseUrl}/blog/${post.slug}`;
+  return {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": `${articleUrl}#article`,
+    url: articleUrl,
+    headline: post.title,
+    description: post.description,
+    inLanguage: siteConfig.brand.language,
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": articleUrl,
+    },
+    datePublished: post.publishedAt,
+    dateModified: post.updatedAt || post.publishedAt,
+    author: {
+      "@type": "Person",
+      name: post.author.name,
+      ...(post.author.url ? { url: post.author.url } : {}),
+    },
+    publisher: {
+      "@id": orgId,
+    },
+    isPartOf: {
+      "@id": websiteId,
+    },
+    ...(post.image
+      ? {
+          image: {
+            "@type": "ImageObject",
+            url: post.image.startsWith("http")
+              ? post.image
+              : `${baseUrl}${post.image}`,
+          },
+        }
+      : {}),
+  };
+}
+
