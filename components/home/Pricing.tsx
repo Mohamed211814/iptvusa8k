@@ -132,7 +132,7 @@ export function Pricing() {
                     </span>
                   </a>
 
-                  <p className="text-[11px] text-center text-[#887eaa] mt-3 flex items-center justify-center gap-1 font-medium">
+                  <p className="text-[11px] text-center text-[#5a4d7a] mt-3 flex items-center justify-center gap-1 font-medium">
                     <ShieldCheck className="w-3.5 h-3.5 text-[#059669]" />
                     <span>Instant WhatsApp Setup & Activation</span>
                   </p>

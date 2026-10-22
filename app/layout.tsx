@@ -9,11 +9,15 @@ import { siteConfig } from "@/lib/site-config";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  display: "swap",
+  preload: true,
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  display: "swap",
+  preload: true,
 });
 
 export const viewport: Viewport = {
@@ -62,6 +66,7 @@ export default function RootLayout({
   return (
     <html
       lang="en-US"
+      data-scroll-behavior="smooth"
       className={`${geistSans.variable} ${geistMono.variable} h-full`}
     >
       <body className="min-h-screen flex flex-col bg-white text-[#29166f] antialiased selection:bg-[#c62b27] selection:text-white">

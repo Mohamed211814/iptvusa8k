@@ -13,9 +13,9 @@ export function Hero() {
           alt="IPTV USA Streaming Entertainment"
           fill
           priority
-          quality={95}
+          quality={80}
           className="object-cover object-center"
-          sizes="100vw"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 100vw"
         />
       </div>
 
@@ -54,14 +54,14 @@ export function Hero() {
 
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl text-base font-bold text-white bg-black/40 hover:bg-black/60 backdrop-blur-md border border-white/30 hover:border-[#ffd700]/60 transition-all shadow-xl w-full sm:w-auto"
+            className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl text-base font-bold text-white bg-black/50 hover:bg-black/70 backdrop-blur-md border border-white/40 hover:border-[#ffd700]/70 transition-all shadow-xl w-full sm:w-auto"
           >
             <span>Ask Support a Question</span>
           </Link>
         </div>
 
         {/* Safe note */}
-        <p className="text-xs text-white/90 font-medium mt-5 drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]">
+        <p className="text-xs text-white font-semibold mt-5 drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]">
           *Transparent USD pricing • Fast WhatsApp Activation & 24/7 Dedicated Support
         </p>
       </div>

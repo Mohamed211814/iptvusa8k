@@ -203,7 +203,7 @@ export function Footer() {
         </div>
 
         {/* Informative Disclaimer */}
-        <div className="mt-12 pt-8 border-t border-[#ebb0ad]/50 text-xs text-[#887eaa] leading-relaxed space-y-2">
+        <div className="mt-12 pt-8 border-t border-[#ebb0ad]/50 text-xs text-[#52456e] leading-relaxed space-y-2">
           <p>
             <strong className="text-[#29166f]">Important Notice:</strong> IPTV USA provides digital television subscription access for supported media players. We do not broadcast or rebroadcast copyrighted television signals without appropriate permissions. All product names, logos, and brands mentioned on this website (such as Samsung, LG, Apple TV, Firestick, Roku, Android) are property of their respective owners and are used purely for compatibility and device identification purposes.
           </p>
@@ -213,7 +213,7 @@ export function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-8 pt-6 border-t border-[#ebb0ad]/50 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#887eaa]">
+        <div className="mt-8 pt-6 border-t border-[#ebb0ad]/50 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#52456e]">
           <p>© <CurrentYear /> {siteConfig.brand.name}. All rights reserved.</p>
           <div className="flex items-center gap-6">
             <Link href="/legal#privacy" className="hover:text-[#c62b27] transition-colors">
