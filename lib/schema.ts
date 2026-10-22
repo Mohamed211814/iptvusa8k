@@ -57,6 +57,14 @@ export function getWebSiteSchema() {
     publisher: {
       "@id": orgId,
     },
+    potentialAction: {
+      "@type": "SearchAction",
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: `${baseUrl}/#plans?q={search_term_string}`,
+      },
+      "query-input": "required name=search_term_string",
+    },
   };
 }
 
@@ -116,7 +124,7 @@ export function getServiceSchema() {
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "IPTV USA Subscription Tiers",
-      itemListElement: siteConfig.pricingPlans.map((plan, index) => ({
+      itemListElement: siteConfig.pricingPlans.map((plan) => ({
         "@type": "Offer",
         "@id": `${baseUrl}/#plan-${plan.id}`,
         name: `${siteConfig.brand.name} ${plan.name}`,
@@ -126,7 +134,6 @@ export function getServiceSchema() {
         priceValidUntil: "2027-12-31",
         availability: "https://schema.org/InStock",
         url: `${baseUrl}/#plans`,
-        position: index + 1,
         seller: {
           "@id": orgId,
         },
