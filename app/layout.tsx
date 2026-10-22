@@ -51,7 +51,11 @@ export const metadata: Metadata = {
     ],
   },
   manifest: "/site.webmanifest",
+  verification: {
+    google: "hyer0_a5uXKwiHMpAadmjiuhcwjkKr-FaNs3a2N3uAs",
+  },
   other: {
+    "google-site-verification": "hyer0_a5uXKwiHMpAadmjiuhcwjkKr-FaNs3a2N3uAs",
     "msapplication-TileColor": "#29166f",
     "msapplication-TileImage": "/mstile-150x150.png",
     "msapplication-config": "/browserconfig.xml",

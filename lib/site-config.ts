@@ -47,7 +47,7 @@ export interface LegalSection {
   content: string[];
 }
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://iptvusa.example.com";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://iptvusa-8k.com";
 
 export const siteConfig = {
   brand: {
