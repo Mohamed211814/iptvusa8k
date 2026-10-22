@@ -1,6 +1,5 @@
 import React from "react";
-import Link from "next/link";
-import { Sliders, Mail, PlayCircle, ArrowRight } from "lucide-react";
+import { Sliders, Mail, PlayCircle } from "lucide-react";
 
 const steps = [
   {
@@ -34,15 +33,15 @@ export function HowItWorks() {
     <section id="how-it-works" className="py-20 lg:py-24 bg-white scroll-mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-[#fbf2f4] border border-[#f0c5c1] text-[#c62b27] text-xs font-bold uppercase tracking-wider mb-4 shadow-xs">
-            Quick Onboarding Process
+        <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-14">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#fbf2f4] border border-[#f0c5c1] text-[#c62b27] text-xs font-bold uppercase tracking-wider mb-3 shadow-xs">
+            Quick Setup
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-black text-[#29166f] tracking-tight leading-tight">
-            IPTV USA Setup Guide: How Getting Started Works in 3 Simple Steps
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#29166f] tracking-tight">
+            IPTV USA Setup in 3 Simple Steps
           </h2>
-          <p className="mt-4 text-base sm:text-lg text-[#4b3f72] leading-relaxed">
-            From plan selection to active streaming in three simple, hassle free steps.
+          <p className="mt-3 text-base sm:text-lg text-[#4b3f72] leading-relaxed">
+            From plan selection to active streaming in minutes.
           </p>
         </div>
 
@@ -84,17 +83,6 @@ export function HowItWorks() {
               </div>
             );
           })}
-        </div>
-
-        {/* Bottom CTA Link */}
-        <div className="mt-14 text-center">
-          <Link
-            href="/#plans"
-            className="inline-flex items-center gap-2 text-sm sm:text-base font-bold text-[#c62b27] hover:text-[#9e1b17] transition-colors"
-          >
-            <span>Ready to get started? Explore subscription plans</span>
-            <ArrowRight className="w-4 h-4 text-[#c62b27]" />
-          </Link>
         </div>
       </div>
     </section>
