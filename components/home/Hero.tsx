@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Sparkles, CheckCircle2 } from "lucide-react";
+import { ArrowRight, Sparkles } from "lucide-react";
 
 export function Hero() {
   return (
@@ -37,29 +37,9 @@ export function Hero() {
         </h1>
 
         {/* Subtitle */}
-        <p className="text-lg sm:text-xl text-white font-medium leading-relaxed max-w-3xl mb-8 drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
+        <p className="text-lg sm:text-xl text-white font-medium leading-relaxed max-w-3xl mb-10 drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
           <strong className="text-[#ffd700] font-bold">IPTV USA</strong> delivers reliable, high definition digital streams configured specifically for United States viewers. Connect your Smart TV, Firestick, or mobile device in minutes with dedicated 24/7 technical support.
         </p>
-
-        {/* Bullet Highlights: Centered Frosted Badges */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 mb-10 w-full max-w-2xl text-left">
-          <div className="flex items-center gap-3 px-4 py-3 rounded-xl bg-black/60 backdrop-blur-md border border-white/20 text-white shadow-lg">
-            <CheckCircle2 className="w-5 h-5 text-[#ffd700] shrink-0" />
-            <span className="text-sm font-semibold drop-shadow">US Optimized low latency server network</span>
-          </div>
-          <div className="flex items-center gap-3 px-4 py-3 rounded-xl bg-black/60 backdrop-blur-md border border-white/20 text-white shadow-lg">
-            <CheckCircle2 className="w-5 h-5 text-[#ffd700] shrink-0" />
-            <span className="text-sm font-semibold drop-shadow">Compatible with all major IPTV apps</span>
-          </div>
-          <div className="flex items-center gap-3 px-4 py-3 rounded-xl bg-black/60 backdrop-blur-md border border-white/20 text-white shadow-lg">
-            <CheckCircle2 className="w-5 h-5 text-[#ffd700] shrink-0" />
-            <span className="text-sm font-semibold drop-shadow">Interactive Electronic Program Guide (EPG)</span>
-          </div>
-          <div className="flex items-center gap-3 px-4 py-3 rounded-xl bg-black/60 backdrop-blur-md border border-white/20 text-white shadow-lg">
-            <CheckCircle2 className="w-5 h-5 text-[#ffd700] shrink-0" />
-            <span className="text-sm font-semibold drop-shadow">Fast digital delivery & setup support</span>
-          </div>
-        </div>
 
         {/* CTAs */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
