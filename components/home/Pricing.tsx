@@ -34,15 +34,15 @@ export function Pricing() {
     <section id="plans" className="py-20 lg:py-28 bg-white scroll-mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#f4e9f1] border border-[#ebb0ad] text-[#c62b27] text-xs font-semibold uppercase tracking-wider mb-3 shadow-sm">
-            Subscription Tiers (USD)
+        <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-14">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#f4e9f1] border border-[#ebb0ad] text-[#c62b27] text-xs font-bold uppercase tracking-wider mb-3 shadow-xs">
+            Subscription Plans
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#29166f] tracking-tight">
-            IPTV USA Subscription Plans: Flexible and Transparent Tiers for Every Household
+            IPTV USA Subscription Plans
           </h2>
-          <p className="mt-4 text-base sm:text-lg text-[#392b6b] leading-relaxed">
-            Choose the subscription duration that fits your needs. Instant digital activation with full channel catalog access, electronic program guide, and fast customer assistance.
+          <p className="mt-3 text-base sm:text-lg text-[#392b6b] leading-relaxed">
+            Instant activation and premium streaming on any device.
           </p>
         </div>
 
