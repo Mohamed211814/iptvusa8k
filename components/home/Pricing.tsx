@@ -31,7 +31,8 @@ const colorStyles = {
 
 export function Pricing() {
   return (
-    <section id="plans" className="py-20 lg:py-28 bg-white scroll-mt-20">
+    <section id="pricing" className="py-20 lg:py-28 bg-white scroll-mt-20 relative">
+      <div id="plans" className="absolute -top-20" aria-hidden="true" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-14">

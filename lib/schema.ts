@@ -246,7 +246,7 @@ export function getArticleSchema(post: BlogPost) {
     datePublished: post.publishedAt,
     dateModified: post.updatedAt || post.publishedAt,
     author: {
-      "@type": "Person",
+      "@type": post.author.type || "Organization",
       name: post.author.name,
       ...(post.author.url ? { url: post.author.url } : {}),
     },
