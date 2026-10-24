@@ -10,7 +10,11 @@ import {
 } from "lucide-react";
 import { siteConfig } from "@/lib/site-config";
 import { getPostBySlug, getAllPostSlugs } from "@/lib/blog";
-import { getArticleSchema, getBreadcrumbSchema } from "@/lib/schema";
+import {
+  getArticleSchema,
+  getBreadcrumbSchema,
+  getPostFaqSchema,
+} from "@/lib/schema";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { getBreadcrumbsForPost } from "@/lib/navigation";
@@ -114,10 +118,15 @@ export default async function BlogPostPage({ params }: PageProps) {
     { name: "Blog", path: "/blog" },
     { name: post.title, path: `/blog/${post.slug}` },
   ]);
+  const postFaqSchema = getPostFaqSchema(post);
+  const jsonLdSchemas: Record<string, unknown>[] = [articleSchema, breadcrumbSchema];
+  if (postFaqSchema) {
+    jsonLdSchemas.push(postFaqSchema);
+  }
 
   return (
     <>
-      <JsonLd data={[articleSchema, breadcrumbSchema]} />
+      <JsonLd data={jsonLdSchemas} />
 
       <main className="min-h-screen bg-white text-[#29166f] py-12 sm:py-16 lg:py-20">
         <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

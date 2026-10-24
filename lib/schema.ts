@@ -269,3 +269,24 @@ export function getArticleSchema(post: BlogPost) {
   };
 }
 
+/**
+ * FAQPage structured data for articles with FAQs
+ */
+export function getPostFaqSchema(post: BlogPost) {
+  if (!post.faqs || post.faqs.length === 0) return null;
+  const articleUrl = `${baseUrl}/blog/${post.slug}`;
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": `${articleUrl}#faqpage`,
+    mainEntity: post.faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
+  };
+}
+
