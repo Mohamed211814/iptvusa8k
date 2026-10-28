@@ -22,6 +22,20 @@ const nextConfig: NextConfig = {
       },
     },
   },
+  async redirects() {
+    return [
+      {
+        source: "/blog/iptv-4k",
+        destination: "/blog/4k-iptv-usa",
+        permanent: true,
+      },
+      {
+        source: "/blog/subscribe-iptv",
+        destination: "/blog/iptv-subscribe",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
